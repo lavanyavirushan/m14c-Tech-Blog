@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="wrapper">
+        {{#each blogs as | blog|}}
+        <div class="card m-5" style="background: var(--l)">
+            <div class="card-body">
+                <h4 class="card-title text-light">{{ blog.title }}</h4>
+                <h6 class="text-light"><i>{{ blog.user.email }} at {{ moment blog.createdAt fromNow=null }}</i></h6>
+                <p class="card-text text-light">{{ blog.description }}
+                </p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
